@@ -33,14 +33,18 @@ export default function Questions() {
   };
 
   const Arrow = ({ isActive }: { isActive: boolean }) => {
-    return <KeyboardArrowDownIcon sx={{ color: isActive ? "#9BF00B" : "#C0C0C0" }} />;
+    return (
+      <KeyboardArrowDownIcon sx={{ color: isActive ? "#9BF00B" : "#C0C0C0" }} />
+    );
   };
 
   return (
     <Container maxWidth="md" className="flex flex-col gap-8 my-20">
-      <div className="flex gap-2">
-        <h1 className="text-5xl font-semibold text-green">Perguntas</h1>
-        <h1 className="text-5xl font-semibold">frequentes</h1>
+      <div className="flex justify-center lg:justify-start gap-2">
+        <h1 className="text-2xl lg:text-5xl font-semibold text-green">
+          Perguntas
+        </h1>
+        <h1 className="text-2xl lg:text-5xl font-semibold">frequentes</h1>
       </div>
       <div>
         {questions.map((props) => (
@@ -52,11 +56,18 @@ export default function Questions() {
               }}
               expanded={activeId === props.id}
             >
-              <AccordionSummary expandIcon={<Arrow isActive={activeId === props.id} />} onClick={() => handleClick(props.id)}>
-                <p className="text-white text-2xl py-4">{props.question}</p>
+              <AccordionSummary
+                expandIcon={<Arrow isActive={activeId === props.id} />}
+                onClick={() => handleClick(props.id)}
+              >
+                <p className="text-white text-xs lg:text-2xl py-4">
+                  {props.question}
+                </p>
               </AccordionSummary>
               <AccordionDetails>
-                <p className="text-grayScale-clean text-lg">{props.answer}</p>
+                <p className="text-grayScale-clean text-xs lg:text-lg">
+                  {props.answer}
+                </p>
               </AccordionDetails>
             </Accordion>
             <div className="w-full h-px opacity-10 bg-grayScale-clean" />

@@ -17,7 +17,7 @@ export default function Navbar() {
       className="h-24 flex gap-10 p-5 items-center justify-between"
     >
       <div className="flex gap-10 items-center">
-        <Image src={xbox_logo} width={90} alt="xbox-logo" />
+        <Image src={xbox_logo} alt="xbox-logo" className="w-20 lg:w-28" />
         {navbar.map((props) => (
           <Button
             key={props.id}

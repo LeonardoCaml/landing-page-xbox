@@ -8,11 +8,15 @@ export default function Footer() {
   return (
     <Container maxWidth="md" className="flex justify-between my-10">
       <div>
-        <Image src={xbox_logo} alt="xbox" width={90} />
+        <Image src={xbox_logo} alt="xbox" className="w-20 lg:w-28" />
       </div>
-      <div className="flex gap-10">
-        <p className="text-grayScale-primary">@ Microsoft {data}</p>
-        <p className="text-grayScale-primary">Todos os direitos reservados</p>
+      <div className="flex flex-col lg:flex-row gap-0 lg:gap-10">
+        <p className="text-grayScale-primary text-xs lg:text-base">
+          @ Microsoft {data}
+        </p>
+        <p className="text-grayScale-primary text-xs lg:text-base">
+          Todos os direitos reservados
+        </p>
       </div>
     </Container>
   );
