@@ -6,17 +6,18 @@ import contoleXbox from "../../../public/controle-xbox.png";
 export default function Introduction() {
   return (
     <>
-      <div className="flex flex-col items-center gap-10 mt-20">
-        <h1 className="text-7xl z-10 font-semibold">Xbox series X</h1>
+      <div className="flex flex-col items-center gap-5 lg:gap-10 mt-20">
+        <h1 className="text-5xl lg:text-7xl z-10 font-semibold">
+          Xbox series X
+        </h1>
         <div className="w-96 h-96 rounded-full blur-[200px] bg-green absolute mt-10  opacity-20 z-0" />
-        <p className="uppercase text-2xl text-green font-semibold z-10">
+        <p className="uppercase text-base lg:text-2xl text-green font-semibold z-10">
           pedido antecipado
         </p>
         <Image
           src={xbox}
           alt="xbox"
-          width={900}
-          className="mt-10 z-10 opacity-60"
+          className="w-3/4 mt-10 z-10 opacity-60"
         />
       </div>
       <Container
