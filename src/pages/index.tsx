@@ -1,115 +1,139 @@
-import Image from "next/image";
-import localFont from "next/font/local";
+import Image, { StaticImageData } from "next/image";
+import xbox from "../../public/xbox.png";
+import xbox_logo from "../../public/logo-xbox.png";
+import contoleXbox from "../../public/controle-xbox.png";
+import Navbar from "@/components/navbar";
+import Head from "next/head";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import farcry from "../../public/Group 1.png";
+import forza from "../../public/Group 2.png";
+import fifa from "../../public/Group 3.png";
+import minecraft from "../../public/Group 4.png";
+
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Container,
+} from "@mui/material";
+
+const data = new Date().getFullYear();
+
+type gameProps = {
+  id: number;
+  src: StaticImageData;
+};
+
+const games: gameProps[] = [
+  { id: 1, src: farcry },
+  { id: 2, src: forza },
+  { id: 3, src: fifa },
+  { id: 4, src: minecraft },
+];
+
+const questions = [
+  {
+    id: 1,
+    question: "Meus jogos anteriores do Xbox vão funcionar no Xbox Series X?",
+    answer: "lorem impsu tárara tarara",
+  },
+  {
+    id: 2,
+    question: "O que está incluído no Xbox Series X?",
+    answer: "lorem impsu tárara tarara",
+  },
+  {
+    id: 3,
+    question: "Como sei se minha TV é compatível com 4K?",
+    answer: "lorem impsu tárara tarara",
+  },
+];
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div>
+      <Head>
+        <title>xbox</title>
+      </Head>
+      <Navbar />
+      <div className="flex flex-col items-center gap-10 mt-20">
+        <h1 className="text-7xl z-10 font-semibold">Xbox series X</h1>
+        <div className="w-96 h-96 rounded-full blur-[200px] bg-green absolute mt-10  opacity-20 z-0" />
+        <p className="uppercase text-2xl text-green font-semibold z-10">
+          pedido antecipado
+        </p>
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src={xbox}
+          alt="xbox"
+          width={900}
+          className="mt-10 z-10 opacity-60"
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/pages/index.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      </div>
+      <Container
+        maxWidth="lg"
+        className="flex items-center justify-evenly my-52"
+      >
+        <div className="w-[480px] flex flex-col gap-6">
+          <div className="flex flex-col gap-4">
+            <h1 className="text-6xl font-semibold text-green">Desempenho</h1>
+            <h1 className="text-6xl font-semibold">aperfeiçoado</h1>
+          </div>
+          <p className="text-2xl text-grayScale-clean">
+            O controle sem fio Xbox traz um design elegante, conforto refinado e
+            compartilhamento instantâneo para um favorito comum.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <Image src={contoleXbox} alt="control" width={400} />
+      </Container>
+      <div>
+        <div className="flex">
+          {games.map((props) => (
+            <Image
+              key={props.id}
+              src={props.src}
+              alt="game"
+              className="w-1/4"
+            />
+          ))}
+        </div>
+      </div>
+      <Container maxWidth="md" className="flex flex-col gap-8 my-20">
+        <div className="flex gap-2">
+          <h1 className="text-5xl font-semibold text-green">Perguntas</h1>
+          <h1 className="text-5xl font-semibold">frequentes</h1>
+        </div>
+        <div>
+          {questions.map((props) => (
+            <div key={props.id}>
+              <Accordion
+                sx={{
+                  bgcolor: "transparent",
+                  boxShadow: "none",
+                }}
+              >
+                <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+                  <p className="text-white text-2xl py-4">{props.question}</p>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <p className="text-grayScale-clean text-lg">{props.answer}</p>
+                </AccordionDetails>
+              </Accordion>
+              <div className="w-full h-px opacity-10 bg-grayScale-clean" />
+            </div>
+          ))}
+        </div>
+      </Container>
+      <Container maxWidth="md" className="flex justify-between my-10">
+        <div>
+          <Image src={xbox_logo} alt="xbox" width={90} />
+        </div>
+        <div className="flex gap-10">
+          <p className="text-grayScale-primary">@ Microsoft {data}</p>
+          <p className="text-grayScale-primary">Todos os direitos reservados</p>
+        </div>
+      </Container>
     </div>
   );
 }
