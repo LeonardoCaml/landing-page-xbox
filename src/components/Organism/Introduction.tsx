@@ -14,27 +14,25 @@ export default function Introduction() {
         <p className="uppercase text-base lg:text-2xl text-green font-semibold z-10">
           pedido antecipado
         </p>
-        <Image
-          src={xbox}
-          alt="xbox"
-          className="w-3/4 mt-10 z-10 opacity-60"
-        />
+        <Image src={xbox} alt="xbox" className="w-3/4 mt-10 z-10 opacity-60" />
       </div>
       <Container
         maxWidth="lg"
-        className="flex items-center justify-evenly my-52"
+        className="flex items-center justify-between lg:justify-evenly my-52"
       >
-        <div className="w-[480px] flex flex-col gap-6">
-          <div className="flex flex-col gap-4">
-            <h1 className="text-6xl font-semibold text-green">Desempenho</h1>
-            <h1 className="text-6xl font-semibold">aperfeiçoado</h1>
+        <div className="w-[250px] lg:w-[480px] flex flex-col gap-4 lg:gap-6">
+          <div className="flex flex-col gap-2 lg:gap-4">
+            <h1 className="text-4xl lg:text-6xl font-semibold text-green">
+              Desempenho
+            </h1>
+            <h1 className="text-4xl lg:text-6xl font-semibold">aperfeiçoado</h1>
           </div>
-          <p className="text-2xl text-grayScale-clean">
+          <p className="text-base lg:text-2xl text-grayScale-clean">
             O controle sem fio Xbox traz um design elegante, conforto refinado e
             compartilhamento instantâneo para um favorito comum.
           </p>
         </div>
-        <Image src={contoleXbox} alt="control" width={400} />
+        <Image src={contoleXbox} alt="control" className="w-2/6" />
       </Container>
     </>
   );
