@@ -32,7 +32,7 @@ export default function Introduction() {
             compartilhamento instantâneo para um favorito comum.
           </p>
         </div>
-        <Image src={contoleXbox} alt="control" className="w-2/6" />
+        <Image src={contoleXbox} alt="control" className="w-2/5 lg:w-2/6" />
       </Container>
     </>
   );
