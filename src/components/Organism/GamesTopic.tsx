@@ -21,7 +21,7 @@ export default function GameTopics() {
     <div>
       <div className="flex flex-wrap justify-center gap-10 lg:gap-0">
         {games.map((props) => (
-          <Image key={props.id} src={props.src} alt="game" className="w-2/5 lg:w-1/4" />
+          <Image key={props.id} src={props.src} alt="game" className="w-11/12 sm:w-2/5 lg:w-1/4" />
         ))}
       </div>
     </div>
