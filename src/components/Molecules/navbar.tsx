@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className="w-full sm:w-56">
         <Button
           contentText="ver disponibilidade"
-          style="w-full sm:w-56 h-10 bg-green text-black uppercase text-xs font-bold"
+          style="w-full sm:w-56 h-10 bg-green text-black uppercase text-xs font-bold rounded"
         />
       </div>
     </Container>
