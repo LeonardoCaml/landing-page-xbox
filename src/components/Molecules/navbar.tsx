@@ -1,7 +1,7 @@
 import Image from "next/image";
-import xbox_logo from "../../public/logo-xbox.png";
+import xbox_logo from "../../../public/logo-xbox.png";
 import { Container } from "@mui/material";
-import Button from "./button";
+import Button from "../Atoms/button";
 
 const navbar = [
   { id: 1, title: "jogos" },
