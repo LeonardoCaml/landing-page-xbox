@@ -7,17 +7,17 @@ export default function Introduction() {
   return (
     <>
       <div className="flex flex-col items-center gap-5 lg:gap-10 mt-40 sm:mt-20">
-        <h1 className="text-5xl lg:text-7xl z-10 font-semibold">
+        <h1 className="text-4xl lg:text-7xl z-10 font-semibold">
           Xbox series X
         </h1>
         <div className="w-96 h-96 rounded-full blur-[200px] bg-green absolute mt-10  opacity-20 z-0" />
-        <p className="uppercase text-base lg:text-2xl text-green font-semibold z-10">
+        <p className="uppercase text-xs lg:text-2xl text-green font-semibold z-10">
           pedido antecipado
         </p>
         <Image
           src={xbox}
           alt="xbox"
-          className="w-full sm:w-3/4 mt-10 z-10 opacity-60"
+          className="w-full sm:w-3/4 mt-10 z-10 opacity-50"
         />
       </div>
       <Container

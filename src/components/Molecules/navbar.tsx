@@ -12,28 +12,27 @@ const navbar = [
 
 export default function Navbar() {
   return (
-    <Container
-      maxWidth="md"
-      className="h-24 flex flex-col sm:flex-row gap-10 p-5 items-center justify-between"
-    >
-      <div className="flex flex-col sm:flex-row gap-10 items-center">
-        <Image src={xbox_logo} alt="xbox-logo" className="w-20 lg:w-28" />
-        <div className="flex gap-10">
-          {navbar.map((props) => (
-            <Button
-              key={props.id}
-              contentText={props.title}
-              style="h-7 px-3 bg-grayScale-secondary uppercase rounded-2xl text-xs lg:text-sm font-medium"
-            />
-          ))}
+    <div className="flex justify-center">
+      <div className="sm:w-3/4 w-1/2 h-24 flex flex-col sm:flex-row gap-10 p-5 items-center justify-between">
+        <div className="flex flex-col sm:flex-row gap-10 items-center">
+          <Image src={xbox_logo} alt="xbox-logo" className="w-20 lg:w-28" />
+          <div className="flex gap-2 sm:gap-10">
+            {navbar.map((props) => (
+              <Button
+                key={props.id}
+                contentText={props.title}
+                style="h-7 px-3 bg-grayScale-secondary uppercase rounded-2xl text-[.55rem] lg:text-sm font-medium"
+              />
+            ))}
+          </div>
+        </div>
+        <div className="w-full sm:w-56">
+          <Button
+            contentText="ver disponibilidade"
+            style="w-full sm:w-56 h-10 bg-green text-black uppercase text-xs font-bold rounded hover:scale-105 transition"
+          />
         </div>
       </div>
-      <div className="w-full sm:w-56">
-        <Button
-          contentText="ver disponibilidade"
-          style="w-full sm:w-56 h-10 bg-green text-black uppercase text-xs font-bold rounded"
-        />
-      </div>
-    </Container>
+    </div>
   );
 }
